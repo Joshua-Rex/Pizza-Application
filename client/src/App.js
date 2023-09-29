@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import logo from './logo.svg';
 import './App.css';
+import Banner from "./components/Banner";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -11,27 +12,14 @@ function App() {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
-
-    // fetch("/api")
-    //   .then((res) => res.json())
-    //   .then((data) => setData(data.testNum));
   }, []);
-  
-  React.useEffect(() => {
-    fetch("/pizzaBox")
-      .then((res) => res.text())
-      .then((pizzaBox) => setPizzaBox(pizzaBox));
-
-      const root = ReactDOM.createRoot(document.getElementById('normalPizza'));
-      root.render(pizzaBox);
-  },[]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img/>
-        <h1>The Best Pizza Place Around</h1>
-        <nav>Nav goes here</nav>
+        <Banner>
+          <div>The Best Pizza Place Around</div>
+        </Banner>
       </header>
       {/* <div className="normalPizza">
           <div className="pizzaBox">
