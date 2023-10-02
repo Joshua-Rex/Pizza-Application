@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import logo from './logo.svg';
 import './App.css';
-import Banner from "./components/Banner";
+import Banner from "./components/banner";
 
 function App() {
+  {/*
   const [data, setData] = React.useState(null);
   const [pizzaBox, setPizzaBox] = React.useState(null);
 
@@ -13,7 +14,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-
+*/}
   return (
     <div className="App">
       <header className="App-header">
@@ -39,7 +40,7 @@ function App() {
           {/*!pizzaBox ? <p>"Page Loading!"</p> : pizzaBox*/}
         </div>
         <p>
-          {!data ? "Loading..." : data}
+          {/*!data ? "Loading..." : data*/ "Loading..."}
         </p>
     </div>
   );
