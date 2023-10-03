@@ -1,5 +1,3 @@
-import logo from '../images/logo.png';
-
 const subtitleStyle = {
     fontStyle: "italic",
     fontSize: "x-large",
@@ -10,7 +8,8 @@ const subtitleStyle = {
     return (
       <header className="row mb-4">
         <div className="col-5 mt-5">
-          <img src={logo} alt="logo" style={{height: '100px', width: '100px'}}/>
+          {/*<img src="logo.png" alt="logo"/>*/}
+          <p>Just imagine this is an image for the time being</p>
         </div>
         <div className="col-7 mt-5" style={subtitleStyle}>
           {children}

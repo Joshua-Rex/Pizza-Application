@@ -6,91 +6,76 @@ const normalPizzaArray = [
         id: 1,
         name: "The Cheesinator",
         calories: 2171,
-        price: 18.00,
     },
     {
         id: 2,
         name: "The Tomatinator",
         calories: 2172,
-        price: 18.00,
     },
     {
         id: 3,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 4,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 5,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 6,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 7,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 8,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 9,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 10,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 11,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 12,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 13,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 14,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
     {
         id: 15,
         name: "The Mighty Meatinator",
         calories: 2471,
-        price: 18.00,
     },
 ];
 const veganPizzaArray = [
@@ -98,49 +83,40 @@ const veganPizzaArray = [
         id: 1,
         name: "The Vegan Meatinator",
         calories: 1189,
-        price: 18.00,
     },
     {
         id: 2,
         name: "The Vegan Meatinator",
         calories: 1189,
-        price: 18.00,
     },
     {
         id: 3,
         name: "The Vegan Meatinator",
         calories: 1189,
-        price: 18.00,
     },
     {
         id: 4,
         name: "The Vegan Meatinator",
         calories: 1189,
-        price: 18.00,
     },
     {
         id: 5,
         name: "The Vegan Meatinator",
         calories: 1189,
-        price: 18.00,
     },
 ];
 const glutenFreePizzaArray = [
     {
         id: 1,
         name: "The Perrinator",
-        calories: 677,
-        price: 18.00,
+        calories: 677
     },
     {
         id: 2,
         name: "The Gluten-Free Meatinator",
-        calories: 677,
-        price: 18.00,
+        calories: 677
     },
 ]
-
-
 
 
 
