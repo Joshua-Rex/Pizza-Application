@@ -1,5 +1,23 @@
 import React, { useState } from "react";
-const pizzaSize = ["Small", "Medium", "Big", "Pizzanormous"];
+const pizzaSize = [
+    {
+        name: "Small 8\"",
+        price: 0
+    },
+    {
+        name: "Medium 12\"",
+        price: 2.00
+    },
+    {
+        name: "Large16\"",
+        price: 4.00
+    },
+    {
+        name: "Pizzanormous 20\"",
+        price: 8.00
+    }
+];
+
 
 const PizzaBox = ( {pizza} ) => {
     const [sizes, setSizes] = useState(pizzaSize);
@@ -9,10 +27,9 @@ const PizzaBox = ( {pizza} ) => {
             <p>Calories: {pizza.calories}kcal</p>
             <label for="sizes" style={{marginRight: '1em'}}>Choose a size: </label>
             <select>
-                <option value={sizes[0]}>{sizes[0]}</option>
-                <option value={sizes[1]}>{sizes[1]}</option>
-                <option value={sizes[2]}>{sizes[2]}</option>
-                <option value={sizes[3]}>{sizes[3]}</option>
+                {sizes.map((s) => (
+                    <option value={s.name}>{s.name} | £{pizza.price + s.price}</option>
+                ))}
             </select>
         </>
     );
