@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-const pizzaSize = ["Small", "Medium", "Big", "Pizzanormous"];
+const pizzaSize = [{name: "Small (8\")", price: 0}, {name: "Medium (12\")", price: 2.00}, {name: "Large(16\")", price: 4.00}, {name: "Pizzanormous (20\")", price: 8.00}];
+
 
 const PizzaBox = ( {pizza} ) => {
     const [sizes, setSizes] = useState(pizzaSize);
