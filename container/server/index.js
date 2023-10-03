@@ -6,20 +6,10 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const pizzaBox = (
-<div className="pizzaBox">
-    <img className="pizzaImg" />
-    <h2 className="pizzaName">Demo Pizza 1</h2>
-    <p className="pizzaCal">2202</p>
-    <select className="pizzaSizes">
-        <option className="smallSize">Small</option>
-        <option className="mediumSize">Medium</option>
-        <option className="bigSize">Big</option>
-        <option className="superBigSize">Pizza Big</option>
-    </select>
-    <button className="customiseButton">Customise</button>
-</div>
-);
+const crusts = ["Thin Italian", "Stone Crust", "Cheese Stuffed Crust", "Vegan", "Gluten-Free"];
+const sizes = ["Small (8\")", "Medium (12\")", "Large(16\")", "Pizzanormous (20\")"];
+const sides = ["Salad", "Garlic Bread", "Cheesy Garlic Bread", "Colesaw", "Chicken Wings"];
+const drinks = ["Pepsi", "Pepsi Max", "Dr Pepper", "7-UP", "Tango"];
 
 app.get("/api", (req, res) => {
     res.json({message: "Hello from server!"});

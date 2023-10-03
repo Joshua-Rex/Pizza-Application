@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
 import './App.css';
 import Banner from "./components/banner";
+import PizzaList from "./components/pizzaList"
 
 function App() {
   {/*
@@ -15,28 +15,19 @@ function App() {
   }, []);
 */}
   return (
+    
     <div className="App">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="css/globals.css" />
       <header className="App-header">
         <Banner>
           <div>The Best Pizza Place Around</div>
         </Banner>
       </header>
-      {/* <div className="normalPizza">
-          <div className="pizzaBox">
-            <img className="pizzaImg" />
-            <h2 className="pizzaName">Demo Pizza 1</h2>
-            <p className="pizzaCal">2202</p>
-            <select className="pizzaSizes">
-              <option className="smallSize">Small</option>
-              <option className="mediumSize">Medium</option>
-              <option className="bigSize">Big</option>
-              <option className="superBigSize">Pizza Big</option>
-            </select>
-            <button className="customiseButton">Customise</button>
-          </div>
-        </div> */}
         <div id="normalPizza">
           {/*!pizzaBox ? <p>"Page Loading!"</p> : pizzaBox*/}
+          <PizzaList/>
         </div>
         <p>
           {/*!data ? "Loading..." : data*/ "Loading..."}
