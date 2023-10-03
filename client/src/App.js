@@ -4,7 +4,7 @@ import Banner from "./components/banner";
 import PizzaList from "./components/pizzaList"
 
 function App() {
-  {/*
+
   const [data, setData] = React.useState(null);
   const [pizzaBox, setPizzaBox] = React.useState(null);
 
@@ -13,7 +13,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-*/}
+
   return (
     
     <div className="App">
@@ -30,7 +30,7 @@ function App() {
           <PizzaList/>
         </div>
         <p>
-          {/*!data ? "Loading..." : data*/ "Loading..."}
+          {!data ? "Loading..." : data}
         </p>
     </div>
   );

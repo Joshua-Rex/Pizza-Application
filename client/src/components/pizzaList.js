@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PizzaBox from "./pizzaBox";
 
 const normalPizzaArray = [
@@ -140,16 +140,29 @@ const glutenFreePizzaArray = [
     },
 ]
 
-
-
-
-
 const PizzaList = () => {
-    const [normalPizzas, setNormalPizzas] = useState(normalPizzaArray);
+    const [normalPizzas, setNormalPizzas] = useState(null);
     const [veganPizzas, setVeganPizzas] = useState(veganPizzaArray);
     const [glutenFreePizzas, setGlutenFreePizzas] = useState(glutenFreePizzaArray);
     
+    const fetchPizzas = () => {
+        fetch("/normal")
+        .then((res) => res.json())
+        .then((normal) => setNormalPizzas(normal));
 
+        fetch("/vegan")
+        .then((res) => res.json())
+        .then((vegan) => setVeganPizzas(vegan));
+
+        fetch("/glutenFree")
+        .then((res) => res.json())
+        .then((glutenFree) => setGlutenFreePizzas(glutenFree));
+    }
+
+    useEffect(() => {
+        fetch("/normal")
+          .then((res) => setNormalPizzas(res));
+      });
 
     return (
         <>
@@ -157,14 +170,16 @@ const PizzaList = () => {
                 <h2>Normal Pizzas!</h2>
             </div>
             <div className="row align-stretch">
-                {normalPizzas.map((p) => (
+                {!normalPizzas ? "Loading..." : normalPizzas.map((p) => (
                     <div className="col-3 p-2 m-5 border border-dark rounded">
                         <PizzaBox id={p.id} pizza={p} />
                         <button className="btn btn-primary d-block" style={{marginBottom: '1em', marginTop: '1em'}}>Customise</button>
                         <button className="btn btn-primary d-block">buy</button>
                     </div>
                 
-                ))}
+                ))
+                }
+                
             </div>
 
             <div className="text-center">
